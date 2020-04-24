@@ -1,0 +1,22 @@
+.footer
+    padding: 10px
+    background: $color_beach
+    position: absolute;
+    bottom: 0;
+    width: 100%
+    @include breakpoint(768px)
+        padding-left: 60px
+        padding-right: 60px
+    .description
+        text-align: center
+        display: flex
+        flex-direction: column
+        @include breakpoint(768px)
+            text-align: left
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+        span
+            color: $color_white
+            &:last-child
+                font-size: 10px

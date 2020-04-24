@@ -1,0 +1,107 @@
+.header
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    padding: 15px 20px 0 20px
+    @include breakpoint(1180px)
+        padding-top: 0
+    @include breakpoint(1000px)
+        padding-left: 80px
+        padding-right: 80px
+    &.open
+        .menu_header
+            .content_items_menu
+                .icon_menu_content
+                    .menu_bar
+                        svg 
+                            fill: $color_gray_91
+                .list_menu
+                    max-height: 100%
+                    transition: max-height 0.3s ease-in
+    .menu_header
+        .content_items_menu
+            max-width: 1340px
+            @include breakpoint(1180px)
+                display: flex
+                justify-content: space-between
+            .icon_menu_content
+                display: flex
+                justify-content: space-between
+                align-items: center
+                @include breakpoint(1180px)
+                    justify-content: flex-end
+                    order: 2
+                .icon_menu
+                    width: 25px
+                    height: 25px
+                    cursor: pointer
+                    @include breakpoint(1180px)
+                        width: 30px
+                        height: 30px
+                        margin-right: 27px
+                    svg 
+                        fill: $color_beach
+                    &:first-child
+                        @include breakpoint(1180px)
+                            display: none
+                .material-icons
+                    max-height: 24px
+                    margin-right: 15px
+                    svg 
+                        fill: $color_beach
+            .list_menu
+                transition: max-height 0.3s ease-out
+                max-height: 0
+                overflow: hidden
+                flex-direction: column
+                display: flex
+                margin-top: 13px
+                @include breakpoint(480px)
+                    flex-direction: row
+                    flex-wrap: wrap
+                @include breakpoint(1180px)
+                    flex-wrap: inherit
+                    order: 1
+                    max-height: 100%
+                    margin-top: 0
+                .item_menu
+                    display: flex
+                    padding: 10px 20px
+                    max-height: 50px
+                    height: 100%
+                    @include breakpoint(480px)
+                        margin: 0
+                        width: 50%
+                    a
+                        display: flex
+                        align-items: center
+                        .item_icon
+                            width: 25px
+                            height: 25px
+                            margin-right: 8px
+                            svg 
+                                fill: $color_beach
+                        span
+                            color: $color_beach
+                            font-size: 14px
+                        &:hover
+                            .item_icon
+                                svg 
+                                    fill: $color_gray_91
+                            span
+                                color: $color_gray_91
+                    &.selected
+                        background: $color_gray_91
+                        border-radius: 10px
+                        @include breakpoint(480px)
+                            border-radius: 0
+                        .item_icon
+                            svg 
+                                fill: $color_white
+                        span
+                            color: $color_white
+                            .item_menu
+                        &:hover
+                            .item_icon
+                                svg 
+                                    fill: $color_white
+                            span
+                                color: $color_white

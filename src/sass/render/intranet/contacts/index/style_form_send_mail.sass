@@ -1,0 +1,58 @@
+.content_page
+    .uppart
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-left: 8%
+        margin-right: 8%
+        margin-bottom: 10px
+        @include breakpoint(320px 700px)
+            margin-left: 1%
+            margin-right: 1%            
+        .button_uppart
+            width: 320px
+            .button_design
+                pointer-events: none
+                border-color: $color_gray_cc
+                color: $color_gray_cc
+            .send_button
+                pointer-events: all
+                border-color: $color_green_success_34b
+                color: $color_green_success_34b
+            .send_button:hover
+                background-color: $color_green_success_34b
+                color: white
+            .send_button:focus
+                background-color: $color_green_success_34b
+                color: white
+            a
+                .cancel_button
+                    border-color: $color_red_f5
+                    color: $color_red_f5
+                    margin-left: 10px
+                .cancel_button:focus
+                    background-color: $color_red_f5
+                    color: white
+    .contact_to  
+        margin-left: 8%
+        margin-right: 8%
+        display: flex
+        flex-wrap: wrap
+        @include breakpoint(320px 700px)
+            margin-left: 3%                
+            margin-right: 3%        
+        .letter_to_mail
+            font-size: 20px
+        .chips
+            width: 100%
+            min-width: 300px
+            margin-top: 5px
+        #message
+            height: 250px
+            resize: none
+        .recieved
+            color: $color_green_default
+            font-size: 18px
+            padding-left: 10px
+            background-color: $color_gray_soft
+            border-radius: 10px

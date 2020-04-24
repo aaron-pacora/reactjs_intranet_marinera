@@ -1,0 +1,104 @@
+.form 
+    display: flex
+    flex-wrap: wrap
+    .content_contest
+        width: 50%
+        @include breakpoint(0 740px)
+            width: 100%
+        .input-field
+            @include breakpoint(0 740px)
+                margin: 15px auto 0
+            width: 100%
+            min-width: 150px
+    .content_organizer
+        position: relative
+        width: 50%
+        border-radius: 10px
+        @include breakpoint(0 740px)
+            margin-top: 20px
+            width: 100%
+        .content_svg_unfold_more
+            position: absolute
+            top: 0
+            right: 10%
+            width: 40px
+            height: 40px
+            .svg_unfold_more
+                width: 100%
+                height: 100%
+                border: 1px solid $color_beach
+                border-radius: 5px
+                fill: $color_white
+                background: $color_beach
+                transition: background .4s, fill .4s
+                &:hover
+                    cursor: pointer
+                    fill: $color_beach
+                    background: $color_white
+        .content_img
+            overflow: hidden
+            border: 1px solid $color_beach
+            margin: 0 auto
+            width: 200px
+            height: 200px
+            display: flex
+            justify-content: center
+            align-items: center
+            &.load
+                background: $color_gray_95
+                svg
+                    display: none
+                img 
+                    display: block
+            svg
+                
+                fill: $color_gray_95
+                width: 130px
+            img
+                
+                display: none
+                
+                &.horizontal
+                    width: 100%
+                    height: auto
+                &.vertical
+                    width: auto
+                    height: 100%
+        .content_select
+            margin: 30px auto 0
+            width: 80%
+            min-width: 150px
+            .select-dropdown //input
+                text-overflow: ellipsis
+            .dropdown-content.select-dropdown //ul
+                li
+                    text-overflow: ellipsis
+
+    .content_buttons
+        display: flex
+        flex-wrap: wrap
+        justify-content: flex-start
+        align-items: center
+        height: 80px
+        width: 100%
+        .button_design
+            margin-top: 20px 
+            &:first-child
+                margin-right: 30px
+                @include breakpoint(0 740px)
+                    margin: 20px auto 10px
+            @include breakpoint(0 740px)
+                width: 100%
+                margin: 10px auto 
+        .preloader-wrapper
+            margin: 0
+            display: none
+        &.show-preloader
+            .button_design
+                display: none
+            .preloader-wrapper
+                display: block
+                
+            
+
+

@@ -1,0 +1,46 @@
+.content_page
+    .title_def
+        margin-left: 8%
+        @include breakpoint(320px 1000px)
+            margin-left: 1.5%
+    .table      
+        display: flex
+        margin-top: 30px
+        flex-wrap: wrap
+        justify-content: center
+        // margin: 10px
+        // justify-content: center
+        .without_contact
+            width: 100%
+            text-align: center
+            font-size: 14px
+            color: $color_gray_91
+        .card_contact
+            font-size: 14
+            min-width: 320px 
+            width: 900px
+            border: 1px solid $color_gray_cc
+            padding: 10px
+            .checkbox_table
+                display: flex
+                justify-content: space-between
+            .name
+                margin-top: 5px
+                font-size: 16px
+            .email
+                margin-top: 5px
+                display: flex
+                justify-content: space-between
+                .options_table
+                    width: 70px
+                    display: flex
+                    justify-content: space-around
+                    .icon_option
+                        width: 24px
+                        height: 24px
+                        cursor: pointer
+                        fill: $color_gray_91
+                    .icon_option:hover
+                        fill: $color_beach
+            
+                    

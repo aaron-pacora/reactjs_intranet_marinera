@@ -1,0 +1,37 @@
+.form
+    .content_data
+        margin-bottom: 30px
+        @include breakpoint(740px)
+            display: flex
+            margin-bottom: 0
+            > div
+                width: 100%
+        .content_inps
+            margin-bottom: 30px
+            @include breakpoint(740px)
+                margin-bottom: 0
+            .input_design
+                margin-bottom: 20px
+                textarea
+                    height: 70px
+                    @include breakpoint(740px)
+                        height: 170px
+    .message_aditional
+        margin-bottom: 20px
+        span
+            font-size: 12px
+            color: $color_gray_91
+    .content_buttons
+        display: flex
+        flex-direction: column
+        @include breakpoint(400px)
+            flex-direction: row
+            justify-content: center
+        @include breakpoint(740px)
+            justify-content: flex-start
+        .button_design
+            margin-bottom: 20px
+            @include breakpoint(400px)
+                max-width: 170px
+                &:first-child
+                    margin-right: 30px

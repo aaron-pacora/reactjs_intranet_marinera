@@ -1,0 +1,52 @@
+.content_title
+    margin-left: 1.67%
+
+.content_principal
+    display: flex
+    justify-content: flex-start
+    margin-top: 40px
+    @include breakpoint(0 650px)
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+    .content_img_selected
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-left: 1.67%
+        border: 1px $color_beach solid
+        min-width: 300px
+        max-width: 400px
+        // height: 170px
+        max-height: 400px
+        position: relative
+        overflow: hidden
+        border-radius: 5px
+        display: none
+        svg
+            fill: $color_gray_91
+            height: 80%
+        img 
+            position: absolute
+            width: 100%
+            height: auto
+            
+            
+    .content_button
+        
+        align-self: flex-end  
+        margin-left: 30px
+        @include breakpoint(0 650px)
+            margin-top: 20px
+            align-self: center
+        @include breakpoint(0 400px)
+            width: 100%
+            margin-left: 0
+        label
+            display: block
+            box-sizing: border-box
+            font-family: 'Roboto'
+            overflow: hidden
+            input
+                display: none

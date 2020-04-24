@@ -1,0 +1,109 @@
+$publication: 110px
+
+.table_design
+    
+    .message_empty
+        text-align: center
+        padding: 20px
+        color: $color_gray_cc
+    .item
+        @include breakpoint(780px)
+            display: flex
+            > div
+                width: 100%
+                padding: 0px 15px
+            .order_number
+                max-width: 58px
+                text-align: center
+            .publication_item
+                max-width: $publication
+            .day_item
+                max-width: 150px
+            .options_item
+                max-width: 100px
+    .headboard
+        background: $color_beach
+        padding: 15px
+        padding-bottom: 10px
+        text-align: center
+        span
+            color: $color_white
+        @include breakpoint(0 779px)
+            display: none
+    .body_table_design
+        .item
+            border: 1px $color_beach solid
+            border-radius: 10px
+            padding: 15px
+            padding-bottom: 10px
+            position: relative
+            margin-bottom: 20px
+            @include breakpoint(780px)
+                border-top: none
+                border-radius: 0
+                margin-bottom: 0
+                max-height: 60px
+            span
+                color: $color_txt_dark
+            > div
+                overflow: hidden
+                white-space: nowrap
+                text-overflow: ellipsis
+                &::before
+                    color: $color_beach
+                    @include breakpoint(780px)
+                        display: none
+                @include breakpoint(0 779px)
+                    padding: 5px
+            .order_number
+                @include breakpoint(0 779px)
+                    display: none
+            .publication_item
+                @include breakpoint(780px)
+                    text-align: center
+                &::before
+                    content: 'Fecha: '
+            .title_item
+                @include breakpoint(780px)
+                    text-align: center
+                &::before
+                    content: 'Título: '
+            .subtitle_item
+                @include breakpoint(780px)
+                    text-align: center
+                &::before
+                    content: 'Subtítulo: '
+
+            .day_item
+                @include breakpoint(780px)
+                    text-align: center
+                &::before
+                    content: 'Día:  '
+            .name_item
+                @include breakpoint(780px)
+                    text-align: center
+                &::before
+                    content: 'Nombre:  '
+            .place_item
+                @include breakpoint(780px)
+                    text-align: center
+                &::before
+                    content: 'Lugar:  ' 
+                    
+
+            .options_item
+                width: 100%
+                display: flex
+                justify-content: flex-end
+                .icon_option
+                    width: 25px
+                    height: 25px
+                    cursor: pointer
+                    margin-right: 15px
+                    svg path
+                        fill: $color_gray_91
+                    &:hover
+                        svg path
+                            fill: $color_beach
+                    &:last-child
+                        margin-right: 0

@@ -1,0 +1,20 @@
+.fixed-action-btn
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    .btn-floating
+        transition: transform 0.5s,background 0.5s
+    .new
+        transform: scale(1)
+    .delete
+        position: absolute
+        //top: 0
+        transform: scale(0)
+    &.show_delete
+        .new
+            transform: scale(0)
+        .delete
+            transform: scale(1)
+    
+

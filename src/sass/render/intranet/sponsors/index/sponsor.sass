@@ -1,0 +1,115 @@
+.sponsor
+    margin-top: 10px
+    position: relative
+    width: 30%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    transition: transform 0.5s ,background 0.5s
+    max-width: 300px
+    @include breakpoint(0 870px)
+        width: 45%
+        .input-field
+            min-width: 150px
+    @include breakpoint(0 520px)
+        width: 90%
+    .content_selected
+        pointer-events: none
+        display: none
+        svg
+            fill: $color_white
+            width: 100px
+            height: 100px
+    &.selected 
+        .content_selected
+            display: flex
+            justify-content: center
+            align-items: center
+            position: absolute
+            top: 0
+            width: 100%
+            height: 100%
+            z-index: 1
+            border-radius: 10px
+            background: rgba(225, 249, 9,.6)
+        .content_buttons
+            pointer-events: none !important
+    &.editable_sponsor
+        transform: scale(1.04)
+        background: rgba(249, 232, 214, .5)
+        cursor: default !important
+        .content_img
+            pointer-events: auto !important
+        .url-buttons
+            pointer-events: auto !important
+    &:hover
+        cursor: -webkit-grab
+        cursor: -moz-grab
+    .content_img
+        pointer-events: none
+        overflow: hidden
+        cursor: pointer
+        display: block
+        border: 1px solid $color_beach
+        border-radius: 10px
+        width: 100%
+        height: 150px
+        display: flex
+        justify-content: center
+        align-items: center
+        input[type=file]
+            display: none
+        .svg_img
+            width: 60%
+            fill: $color_gray_91
+        .img
+            display: none
+            width: 100%
+            height: auto
+        &.vertical
+            .img
+                height: inherit
+                width: auto
+        &.load
+            background: lighten($color_gray_91,20%)
+            position: relative
+            .svg_img
+                display: none
+            .img
+                display: block
+        .content_preloader
+            display: none
+        &.loading
+            .content_preloader
+                border-radius: 10px
+                position: absolute
+                top: 0
+                width: 100%
+                height: 100%
+                display: flex
+                justify-content: center
+                align-items: center
+                background: $color_white
+                .preloader-wrapper
+                    display: block
+                    width: 40px
+                    height: 40px
+    .url-buttons
+        width: 100%
+        pointer-events: none
+        margin-top: 20px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .input
+            text-overflow: ellipsis
+        .content_buttons
+            margin-left: 10px
+            pointer-events: auto
+            width: 32px
+            height: 32px
+            
+
+
+    

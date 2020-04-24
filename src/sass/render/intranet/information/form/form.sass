@@ -1,0 +1,148 @@
+
+form
+  display: flex
+  flex-direction: column
+  
+  .content_control
+    display: flex
+    margin-bottom: 30px
+    @include breakpoint(0 900px)
+      flex-direction: column
+    .content_preloader
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+    .content_image
+      display: flex
+      
+      justify-content: space-around
+      width: 55%
+      margin-right: 5%
+      @include breakpoint(0 900px)
+        width: 100%
+        margin: 0 0 20px
+      @include breakpoint(0 540px)
+        flex-direction: column
+        align-items: center
+      .content_upload_img
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        width: 200px
+        height: 200px
+        border: 1px solid #00A2D1
+        box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3)
+        @include breakpoint(0 540px)
+          margin-bottom: 30px
+          
+        svg
+          fill: #919191
+          width: 130px
+          height: 130px
+        .preloader-wrapper
+            display: none
+        img
+          position: absolute
+        &.in_loading
+            background: $color_white
+            img
+                display: none
+            .icon
+                display: none
+            .preloader-wrapper
+                display: block
+                .circle-clipper
+                    border-color: $color_beach
+      .content_input_file
+        align-self:  center
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 200px
+        height: 41.28px
+        color: #00A2D1
+        background: none 
+        border: 1px solid #00A2D1
+        border-radius: 15px
+        text-transform: none
+        font-size: 16px
+        font-family: 'Roboto'
+        @include breakpoint(0 540px)
+          width: 100%
+        &:hover 
+          background: #00A2D1
+          color: white
+        input[type="file"]
+          
+          display: none
+        
+          
+    .content_buttons
+      display: flex
+      justify-content: space-between
+      align-items: center
+      width: 40%
+      @include breakpoint(0 900px)
+        justify-content: space-around
+        margin: 20px 0 
+        width: 100%
+      @include breakpoint(0 400px)
+        flex-direction: column
+        
+      button
+        @include breakpoint(0 400px)
+          width: 100%
+          &[name="Cancelar"]
+            margin-top: 15px
+
+          
+        
+            
+  h2
+    font-size: 24px
+  .content_text
+    display: flex
+    @include breakpoint(0 900px)
+      flex-direction: column
+    .content_textArea
+      
+      width: 55%
+      margin-right: 5%
+      display: flex
+      flex-direction: column
+      @include breakpoint(0 900px)
+        width: 100%
+        margin-right: 0
+      textarea
+        min-height: 64px
+        margin-top: 5px
+      
+    .content_inputs
+      width: 40%
+      @include breakpoint(0 900px)
+        width: 100%
+
+      .content_cell_phones
+        display: flex
+        justify-content: flex-start
+        .input-field
+          min-width: 0
+          .content_cell
+          width: 45%
+          margin-right: 5%
+          max-width: 300px
+        
+          
+      input[name="adress"]
+      .content_short_desc
+        display: flex
+        flex-direction: column
+        textarea  
+        .count
+          margin-top: -40px
+          align-self: flex-end
+          width: 50px
+          height: 20px
+          color: #9e9e9e

@@ -1,0 +1,25 @@
+.filter
+    display: flex
+    align-items: center
+    margin-top: 20px
+    margin-bottom: 30px
+    @include breakpoint(0 600px)
+        flex-direction: column
+    .content_inputs
+        width: 100%
+        @include breakpoint(0 600px)
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: center
+        .input-field
+            margin-bottom: 20px
+            max-width: 260px
+            @include breakpoint(900px) 
+                margin-bottom: 0
+        @include breakpoint(580px)
+            display: flex
+            // justify-content: space-around
+            justify-content: flex-start
+    @include breakpoint(900px)
+        flex-direction: row
